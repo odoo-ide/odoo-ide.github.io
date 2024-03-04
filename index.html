@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odoo IDE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Playpen Sans"
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 64px;
+        }
+
+        .menus a {
+            color: gray;
+            margin-left: 32px;
+        }
+
+        #header a:hover {
+            color: forestgreen;
+            font-weight: 500;
+        }
+
+        #title {
+            color: forestgreen;
+            text-align: center;
+            margin: 24px;
+            font-weight: 500;
+        }
+
+        #subtitle {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        #products {
+            display: flex;
+            margin: 32px 96px;
+        }
+
+        .product {
+            flex: auto;
+            margin: 48px;
+        }
+
+        .product div {
+            text-align: center;
+        }
+
+        .product-button {
+            margin-top: 32px;
+        }
+
+        .product a {
+            padding: 6px 24px;
+            border: 1px solid;
+            border-radius: 32px;
+            white-space: nowrap;
+            color: forestgreen;
+        }
+
+        .product a:hover {
+            background-color: forestgreen;
+            color: white;
+        }
+
+        .product-status {
+            position: absolute;
+            font-size: 0.8rem;
+            padding: 3px 12px;
+            border: 1px solid;
+            border-radius: 32px;
+            color: red;
+            margin-left: -72px;
+        }
+
+        .features {
+            margin: auto;
+            width: 50%;
+        }
+
+        .feature h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: forestgreen;
+        }
+
+        @media (max-width: 768px) {
+            #products {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 992px) {
+            #products {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .features {
+                margin: 0;
+                padding: 0 12px;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div>
+            <a href="https://odoo-ide.com">
+                <img src="images/logo.png" alt="" width="64">
+            </a>
+        </div>
+        <div class="menus">
+            <a class="menu" href="https://github.com/orgs/odoo-ide/discussions" target="_blank">
+                News
+            </a>
+            <a class="menu" href="https://github.com/odoo-ide" target="_blank">
+                GitHub
+            </a>
+        </div>
+    </div>
+
+    <h1 id="title">
+        Odoo Framework Integration for IDEs
+    </h1>
+    <p id="subtitle">Boost your productivity and make your life easier as an Odoo developer</p>
+
+    <div id="products">
+        <div class="product">
+            <div>
+                <img src="images/pycharm.svg" width="128px" alt="PyCharm">
+            </div>
+            <div class="product-button">
+                <a href="https://plugins.jetbrains.com/plugin/13499-odoo" target="_blank">PyCharm</a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div>
+                <span class="product-status">Preview</span>
+                <img src="images/vscode.svg" width="128px" alt="Visual Studio Code">
+            </div>
+            <div class="product-button">
+                <a href="https://marketplace.visualstudio.com/items?itemName=trinhanhngoc.vscode-odoo"
+                    target="_blank">Visual Studio Code</a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div>
+                <span class="product-status">Coming</span>
+                <img src="images/fleet.svg" width="128px" alt="JetBrains Fleet">
+            </div>
+            <div class="product-button">
+                <a href="https://www.jetbrains.com/fleet/" target="_blank">JetBrains Fleet</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h2>Module</h2>
+            <p>No more red zig-zag underlines indicating errors due to unresolved imports to Odoo modules. Odoo IDE can
+                discover all modules in your project for resolving imports, module files, module dependencies, models,
+                views, data, assets,...</p>
+            <img src="images/odoo-module.png" alt="Odoo Module" width="100%" loading="lazy">
+        </div>
+
+        <div class="feature">
+            <h2>ORM</h2>
+            <p>Odoo IDE knows almost everything about Odoo ORM including models, fields, recordsets, inheritance and
+                extension, common methods, environment, method decorators, search domain,... to provide the best code
+                completion and navigation experience for Odoo developers.</p>
+            <img src="images/odoo-orm.png" alt="Odoo ORM" width="100%" loading="lazy">
+        </div>
+
+        <div class="feature">
+            <h2>XML</h2>
+            <p>Odoo is a data driven framework and XML is the main language for data and view definition. Odoo IDE
+                provides amazing code completion and navigation for tags, attributes, models, fields, external ids, eval
+                expressions,... It even understands view inheritance and xpath.</p>
+            <img src="images/odoo-xml.png" alt="Odoo XML" width="100%" loading="lazy">
+        </div>
+
+        <div class="feature">
+            <h2>CSV</h2>
+            <p>Though XML is the preferred way to define data for most cases in Odoo, CSV is commonly used to define
+                access rights and some master data such as countries,... And of couse, Odoo IDE also supports code
+                completion and navigation for fields and external ids in CSV files.</p>
+            <img src="images/odoo-csv.png" alt="Odoo CSV" width="100%" loading="lazy">
+        </div>
+
+        <div class="feature">
+            <h2>JavaScript</h2>
+            <p>Odoo has its own JS Framework which is powerful but needs more support from IDEs. Fortunately, Odoo IDE
+                always strives to keep up with the latest innovations of the framework to provide the best coding
+                experience for Odoo developers.</p>
+            <img src="images/odoo-js.png" alt="Odoo JavaScript" width="100%" loading="lazy">
+        </div>
+    </div>
+</body>
+
+</html>
