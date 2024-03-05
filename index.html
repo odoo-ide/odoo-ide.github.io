@@ -15,8 +15,9 @@
     <style>
         body {
             font-family: "Playpen Sans";
-            max-width: 75%;
-            margin: 12px auto;
+            max-width: 992px;
+            margin: 0 auto;
+            padding: 24px;
         }
 
         a {
@@ -94,7 +95,7 @@
 
         .features {
             margin: auto;
-            width: 75%;
+            max-width: 768px;
         }
 
         .feature h2 {
@@ -104,10 +105,6 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                max-width: 95%;
-            }
-
             #products {
                 flex-direction: column;
             }
@@ -118,12 +115,6 @@
                 margin-left: 0;
                 margin-right: 0;
             }
-
-            .features {
-                margin: 0;
-                padding: 0 12px;
-                width: fit-content;
-            }
         }
     </style>
 </head>
@@ -132,7 +123,7 @@
     <div id="header">
         <div>
             <a href="/">
-                <img src="images/logo.png" alt="" width="64">
+                <img src="images/logo.png" alt="" width="72">
             </a>
         </div>
         <div class="menus">
