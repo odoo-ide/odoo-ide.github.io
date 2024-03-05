@@ -14,7 +14,9 @@
 
     <style>
         body {
-            font-family: "Playpen Sans"
+            font-family: "Playpen Sans";
+            max-width: 75%;
+            margin: 12px auto;
         }
 
         a {
@@ -25,7 +27,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 12px 64px;
         }
 
         .menus a {
@@ -41,7 +42,7 @@
         #title {
             color: forestgreen;
             text-align: center;
-            margin: 24px;
+            margin: 24px 0;
             font-weight: 500;
         }
 
@@ -57,7 +58,7 @@
 
         .product {
             flex: auto;
-            margin: 48px;
+            margin: 48px 0;
         }
 
         .product div {
@@ -93,7 +94,7 @@
 
         .features {
             margin: auto;
-            width: 50%;
+            width: 75%;
         }
 
         .feature h2 {
@@ -103,6 +104,10 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                max-width: 95%;
+            }
+
             #products {
                 flex-direction: column;
             }
