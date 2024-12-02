@@ -113,6 +113,17 @@
                 flex-direction: column;
             }
         }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+                color: white;
+            }
+
+            .features img {
+                filter: invert();
+            }
+        }
     </style>
 </head>
 
